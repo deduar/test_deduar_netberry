@@ -7,8 +7,8 @@
             <h2>Tasks</h2>
         </div>
         <div class="pull-right">
-            <a class="btn btn-success" href="{{route('task.create')}}" title="Create a Task"> <i class="fas fa-plus-circle"></i>
-                </a>
+            <a class="btn btn-success" href="{{route('category.index')}}" title="Create a Task"> Categories</a>
+            <a class="btn btn-success" href="{{route('task.create')}}" title="Create a Task"> <i class="fas fa-plus-circle"></i></a>
         </div>
     </div>
 </div>
@@ -23,6 +23,7 @@
     <tr>
         <th>No</th>
         <th>Description</th>
+        <th>Category</th>
         <th>Date Created</th>
         <th>Actions</th>
     </tr>
@@ -30,6 +31,7 @@
         <tr>
             <td>{{$task->id}}</td>
             <td>{{$task->description}}</td>
+            <td></td>
             <td>{{$task->created_at}}</td>
             <td>
 

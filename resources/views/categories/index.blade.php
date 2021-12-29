@@ -7,8 +7,8 @@
             <h2>Categories</h2>
         </div>
         <div class="pull-right">
-            <a class="btn btn-success" href="{{route('category.create')}}" title="Create a category"> <i class="fas fa-plus-circle"></i>
-                </a>
+            <a class="btn btn-success" href="{{route('task.index')}}" title="Create a Task"> Tasks</a>
+            <a class="btn btn-success" href="{{route('category.create')}}" title="Create a category"> <i class="fas fa-plus-circle"></i></a>
         </div>
     </div>
 </div>
