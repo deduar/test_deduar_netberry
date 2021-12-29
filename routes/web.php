@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('task', '\App\Http\Controllers\TaskController');
+Route::resource('category', '\App\Http\Controllers\CategoryController');
