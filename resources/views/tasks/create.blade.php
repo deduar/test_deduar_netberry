@@ -33,6 +33,16 @@
                         placeholder="description"></textarea>
                 </div>
             </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Category:</strong>
+                    <select name="cat_id" id="cat_id" class="form-control" style="height:50px">
+                        @foreach ($categories as $category)
+                            <option value="{{$category->id}}">{{$category->description}}</option>
+                        @endforeach
+                    </select>
+                </div>
+            </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                 <button type="submit" class="btn btn-primary">Submit</button>
             </div>

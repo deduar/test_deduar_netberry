@@ -11,4 +11,12 @@ class Category extends Model
     protected $fillable = [
         'description'
     ];
+
+    /**
+     * Get the task that owns the Category.
+     */
+    public function task()
+    {
+        return $this->belongsTo(Post::class);
+    }
 }

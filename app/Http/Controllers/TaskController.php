@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Task;
 use Illuminate\Http\Request;
 
@@ -15,8 +16,8 @@ class TaskController extends Controller
     public function index()
     {
         $tasks = Task::latest()->paginate(5);
-
-        return view('tasks.index', compact('tasks'))
+        $categories = Category::all();
+        return view('tasks.index', compact('tasks','categories'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
@@ -26,8 +27,9 @@ class TaskController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
-        return view('tasks.create');
+    { 
+        $categories = Category::all();
+        return view('tasks.create',compact('categories'));
     }
 
     /**

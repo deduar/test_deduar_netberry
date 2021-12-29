@@ -31,7 +31,7 @@
         <tr>
             <td>{{$task->id}}</td>
             <td>{{$task->description}}</td>
-            <td></td>
+            <td>{{$categories[$task->cat_id]->description}}</td>
             <td>{{$task->created_at}}</td>
             <td>
 
